@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body {margin: 30px; border: 1px solid;}
+.aa { width: 400px; height: 400px; background: red; position: relative;}
+.bb { width: 200px; height: 200px; background: blue; position: absolute; 
+		  /* left: 50%; top: 50%; margin-top: -100px; margin-left: -100px; */       /*方法一，需要知道绝对定位元素的尺寸*/
+		/*left: 50%; top: 50%; transform: translate(-50%, -50%);*/					/*方法2，通过css3的translate获取元素尺寸*/
+		left: 0; top: 0; right: 0; bottom: 0; margin: auto;							/*方法3，就这样设置，原因不详*/
+		}
+</style>
+</head>
+
+<body>
+<div class="aa">
+	<div class="bb"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.aa { width: 500px; height: 500px; border: 1px solid; position: relative; margin: 140px; }
+.bb { width: 100px; height: 100px; background: red; position: absolute; margin: -40px; left: 50px; top: 50px;}
+.cc { width: 200px; height: 200px; background: blue;}
+.dd { width: 600px; height: 30px; background: green; }
+</style>
+</head>
+
+<body>
+<!--margin和absolute的left/top没有冲突，共同叠加起作用的-->
+<div class="aa">
+	
+    <div class="cc"></div>
+    <div class="bb"></div>
+    <div class="dd">dsa</div>
+</div>
+</body>
+</html>

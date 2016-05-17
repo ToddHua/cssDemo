@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body { margin: 0; }
+.aa { position: absolute; animation: change1 3s ease-in-out infinite alternate;  }
+.wrap { margin: 50px 0 0 50px;  width: 200px; height: 200px;}
+.bb { border: 1px solid #beceeb; padding: 3px; background: #fff;}
+.bb:hover { animation: change2 1s ease-out infinite alternate;}
+@keyframes change1 {
+		0%{
+				opacity: 1;
+			}
+		100%{
+				opacity: 0;
+			}
+	}
+@keyframes change2 {
+		0%{
+				box-shadow:  0 0 12px rgba(72, 106, 170, 0.5);
+			}
+		100%{
+				box-shadow:  0 0 12px rgba(72, 106, 170, 1.0), 0 0 18px rgba(0, 140, 255, 1.0); 
+			}
+
+	}
+</style>
+</head>
+
+<body>
+<img src="images/often/2.jpg" class="aa"/>
+<img src="images/often/1.jpg" />
+<div class="wrap">
+	<img src="images/often/3.jpg" class="bb"/>
+</div>
+</body>
+</html>

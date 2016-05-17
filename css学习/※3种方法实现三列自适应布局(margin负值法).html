@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="short cut icon" href="images/icon.png" />
+<title>无标题文档</title>
+<style type="text/css">
+html,body { height: 100%; margin: 0; padding: 0;}  /*实现box盒子占满页面，html和body的height设置为100%.box的width按需设置.*/
+#main { width: 100%; height: 100%; background: red; float: left;} 
+.middle { height: 100%; margin: 0 210px; background: pink;}
+#left { width: 200px; float: left; background: blue; height: 100%; margin-left: -100%;}
+#right { width: 200px; float: left; background: green; height: 100%; margin-left: -200px;}
+
+.aa,.bb,.cc{ width: 100px; height: 100px; float:left;}
+.aa { background: gray; width: 600px; border: 5px solid;}
+.bb { background: lightgreen; margin-left: -200px;}
+.cc { background: lightblue; margin-left: -30px;}
+</style>
+</head>
+
+<body>
+<div id="main">    <!--注意三个div的书写顺序-->
+	<div class="middle"></div>
+</div>
+<div id="left"></div>
+<div id="right"></div>
+
+ <!-- 解释：3个浮动div依次排列，第二个左外边距负的绝对值大于自身宽度后，第三个div不再接着第二个div浮动，而是紧靠着第一个div浮动-->
+<div class="aa">解释用的三个div</div>
+<div class="bb">2</div>
+<div class="cc">3</div>
+</body>
+</html>

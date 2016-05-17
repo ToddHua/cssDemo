@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.aa{ border: 1px solid red; line-height: 200px; /*height: 200px;*/ margin-top: 30px;}
+.bb { line-height: 60px; background: lightgreen; /*display: inline-block;*/}  /*若父元素没有设置高度，即使父元素设置了行高，确定最终行高的是line-box的高度（此例子不是父元素的200而是子元素的50！！！）*/
+.cc { border: 1px solid blue;}
+.dd { background: #ccc; padding: 50px; border: 1px solid red; margin-left: 300px;}
+</style>
+</head>
+
+<body>
+
+ <div class="aa">
+ 	<span class="bb">dd</span>
+ </div>
+ <p class="cc">
+ 	<input type="checkbox" style=" vertical-align: -2px;"/><span style="font-size: 12px;">选项a</span> <!--vertical-align解决复选框和文字不对齐的情况-->
+ </p>
+ <a href="#" class="dd">aaaa</a>
+</body>
+</html>

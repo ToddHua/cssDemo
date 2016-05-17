@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.container { width: 100%; border: 1px solid #ccc; margin: 0 auto;}
+.left { float: left; background: red; width: 200px; /*margin-right: 100px;*/}
+.right { float: right; background: green; width:200px;} 
+.middle { background: blue; height: 50px; margin: 0 205px;} /*float元素脱离了文档流，所以其它元素会当float元素不存在一样，不会影响其它元素的margin,padding,以及定位等*/
+
+.aa{ position: relative; width: 100%; border: 1px solid #ccc; margin: 50px auto;}
+.bb { width: 250px; position: absolute; top: 0; left: 0; background: red;}  
+.dd { width: 250px; position: absolute; top: 0; right: 0; background: green;}
+.cc {  margin:0 255px;  background: blue; }  /*左右都设置margin*/
+
+.wrap { width: 500px; border: 1px solid #ccc;}
+.ee { float: left; margin: 60px; background: red; padding: 10px;}/*float脱离了普通流，但是margin、padding还是起作用的(对文字环绕和相邻的浮动元素)*/
+.ff { /*float: left;*/ background: blue; margin-left: 20px;} /*float的margin对文字环绕起作用，但是不影响影响其它元素的margin,padding,以及定位（同上面）*/
+.wrap:after { content:""; display: block; clear: both; height: 0;}  /*解决父元素塌陷问题*/
+</style>
+</head>
+
+<body>									<!--浮动实现自适应布局-->
+<div class="container">
+	<div class="left">11</div>  <!--注意两个浮动写在前面,脱离普通流了-->
+    <div class="right">33</div>
+    <div class="middle">22</div>
+    
+</div>
+
+<div class="aa">				<!-- 绝对定位实现自适应-->
+	<div class="bb">5555</div>
+    <div class="cc">6666</div>
+    <div class="dd">8888</div>
+</div>
+
+<div class="wrap">
+	<div class="ee">rere</div>
+    <div class="ff">dafdaf</div>
+</div>
+</body>
+</html>

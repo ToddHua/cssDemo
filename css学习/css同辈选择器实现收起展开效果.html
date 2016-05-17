@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.wrap { width: 700px; background: #eee;}
+.label { color: #34538b; cursor: pointer; text-decoration: underline;}
+.checkbox,.more,.hide { position: absolute; left: -999em;}
+.checkbox:checked~ .label .show { position: absolute; left: -999em;}
+.checkbox:checked~ .more,.checkbox:checked~ .label .hide { position: static;}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+    <span> FireFox 19支持（其他都不行，目前）将canvas内容导出为二进制数据图片，默认导出无损24-bit PNG图片。可设置格式，例如导出为90%质量的jpg图片，则使用：toBlob(callback, "image/jpeg", 0.9); 做了个简单的demo演示：</span>
+	<input type="checkbox" id="toggle" class="checkbox"/>
+    <span class="more">   <!--隐藏的内容用行内span标签，方便后面的label紧跟在内容后面，不换行-->
+    	<br />
+    	<img src="images/often/2.jpg" />
+    </span>
+    <label for="toggle" class="label">
+    	<span class="show">show↓</span>
+        <span class="hide">hide↑</span>
+    </label>
+</div>
+</body>
+</html>

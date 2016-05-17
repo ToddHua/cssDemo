@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body { margin: 0; position: relative; height: 500px;} /*inner1的100%继承自定位的body的高度，如果body没有定位，则继承html的高度，即窗口的高度*/
+.outer { width: 300px; height: 300px; display: inline-block; border: 1px solid;}
+.inner1 { width: 200px; height: 100%; background: red; position: absolute;} /*100%为包含块的高度，默认包含块为html*/
+.inner2 { width: 200px; height: inherit; background: red; position: absolute;}/*inherit为父元素的高度*/
+</style>
+</head>
+
+<body>
+<div class="outer"><div class="inner1"></div></div>
+<div class="outer"><div class="inner2"></div></div>
+</body>
+</html>

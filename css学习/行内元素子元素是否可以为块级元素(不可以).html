@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{ margin: 0; padding: 0;}
+.aa { border: 1px solid red; text-decoration: none; /*display: inline-block;*/ float: left;}
+.bb { width: 100px; height: 50px; background: #ccc;}
+.aaa {  border: 1px solid blue; text-decoration: none; /*float: left;*/ display: inline-block;}
+.cc { display: block; background: lightgreen; }                    /*行内元素里面不能放块级元素,除非把行内元素块级化*/
+</style>
+</head>
+
+<body>
+    <a href="#" class="aa">
+    	<p class="bb">块级元素div</p>
+    </a>
+    
+     <a href="#" class="aaa">
+    	<b class="cc">ddadaddddddddddddddddddddddddddadv</b>
+    </a>   
+</body>
+</html>
